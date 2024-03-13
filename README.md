@@ -1,24 +1,11 @@
-# README
+# Habit Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails web app to track good and bad habits.
 
-Things you may want to cover:
+## TODO:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [ ] Add and remove habits.
+- [ ] Mark habits daily/weekly/etc as complete.
+- [ ] Add different lists for different habits.
+- [ ] Add basic user login with devise. 
+- [ ] Add Tailwind CSS.
