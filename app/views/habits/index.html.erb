@@ -2,6 +2,8 @@
 
 <ul>
   <% @habits.each do |habit| %>
-    <li><%= habit.name %></li>
+    <li>name: <%= habit.name %>, done: <%= habit.complete %></li>
   <% end %>
 </ul>
+
+<%= render "new_habit" %>
