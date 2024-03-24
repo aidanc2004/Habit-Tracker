@@ -3,15 +3,21 @@
 <ul>
   <% @habits.each do |habit| %>
     <li>
-      <%# TODO: Just for testing %>
+      <%# TODO: Prototype, using a checkbox and style name better. %>
       <% if habit.complete %>
         <% checkbox = "[x]"%>
+        <% style = "text-decoration:line-through;"%>
       <% else %>
         <% checkbox = "[ ]"%>
+        <% style = ""%>
       <% end %>
 
       <%= button_to checkbox, toggle_complete_path(habit), method: :post, form: {style: "display:inline;"} %>
-      <%= habit.name %>
+
+      <span style=<%= style %>>
+        <%= habit.name %>
+      </span>
+
       <%= button_to "x", habit, :method => "delete", form: {style: "display:inline;"} %>
     </li>
   <% end %>

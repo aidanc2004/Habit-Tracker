@@ -1,6 +1,6 @@
 class HabitsController < ApplicationController
   def index
-    @habits = Habit.all
+    @habits = Habit.all.order(:complete)
   end
 
   def new
@@ -12,6 +12,7 @@ class HabitsController < ApplicationController
     @habit.complete = false
 
     if @habit.save
+      
       redirect_to :root
     else
       render :new, status: :unprocessable_entity
