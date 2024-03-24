@@ -18,6 +18,13 @@ class HabitsController < ApplicationController
     end
   end
 
+  def destroy
+    @habit = Habit.find(params[:id])
+    @habit.destroy
+
+    redirect_back(fallback_location: root_path) 
+  end
+
   private
     def habit_params
       params.require(:habit).permit(:name)

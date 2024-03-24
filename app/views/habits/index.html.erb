@@ -2,7 +2,7 @@
 
 <ul>
   <% @habits.each do |habit| %>
-    <li>name: <%= habit.name %>, done: <%= habit.complete %></li>
+    <li>name: <%= habit.name %>, done: <%= habit.complete %> <%= button_to "Delete", habit, :method => "delete" %></li>
   <% end %>
 </ul>
 
