@@ -2,9 +2,18 @@
 
 <ul>
   <% @habits.each do |habit| %>
-    <li>name: <%= habit.name %>, done: <%= habit.complete %> 
-    <%= button_to "Done", toggle_complete_path(habit), method: :post %>
-    <%= button_to "Delete", habit, :method => "delete" %></li>
+    <li>
+      <%# TODO: Just for testing %>
+      <% if habit.complete %>
+        <% checkbox = "[x]"%>
+      <% else %>
+        <% checkbox = "[ ]"%>
+      <% end %>
+
+      <%= button_to checkbox, toggle_complete_path(habit), method: :post, form: {style: "display:inline;"} %>
+      <%= habit.name %>
+      <%= button_to "x", habit, :method => "delete", form: {style: "display:inline;"} %>
+    </li>
   <% end %>
 </ul>
 
