@@ -5,11 +5,11 @@
     <li>
       <%# TODO: Prototype, using a checkbox and style name better. %>
       <% if habit.complete %>
-        <% checkbox = "[x]"%>
-        <% style = "text-decoration:line-through;"%>
+        <% checkbox = "[x]" %>
+        <% style = "text-decoration:line-through;" %>
       <% else %>
-        <% checkbox = "[ ]"%>
-        <% style = ""%>
+        <% checkbox = "[ ]" %>
+        <% style = "" %>
       <% end %>
 
       <%= button_to checkbox, toggle_complete_path(habit), method: :post, form: {style: "display:inline;"} %>
