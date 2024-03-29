@@ -35,6 +35,6 @@ class HabitsController < ApplicationController
 
   private
     def habit_params
-      params.require(:habit).permit(:name)
+      params.require(:habit).permit(:name, :timespan)
     end
 end

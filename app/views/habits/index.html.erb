@@ -19,6 +19,8 @@
       </span>
 
       <%= button_to "x", habit, :method => "delete", form: {style: "display:inline;"} %>
+
+      <span style="color:gray;">(<%= habit.timespan %>)</span>
     </li>
   <% end %>
 </ul>

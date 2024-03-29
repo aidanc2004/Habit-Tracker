@@ -1,4 +1,14 @@
 <%= form_for :habit, url: habits_path do |f| %>
   <%= f.text_field :name %>
+
+  <div class="field">
+    <%= f.radio_button :timespan, :daily %>
+    <%= f.label :timespan, "Daily" %>
+    <%= f.radio_button :timespan, :weekly %>
+    <%= f.label :timespan, "Weekly" %>
+    <%= f.radio_button :timespan, :monthly %>
+    <%= f.label :timespan, "Monthly" %>
+  </div>
+  
   <%= f.submit "Add" %>
 <% end %>
